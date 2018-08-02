@@ -1,0 +1,45 @@
+from CharacterClasses import *
+from HelperFunctions import *
+import time
+
+# usr chooses their class
+print("Before you begin, tell me a little about yourself. \n")
+time.sleep(1)
+print("Are you a(n):\n\t (1) Human \n\t (2) Orc \n\t (3) Elf \n\t (4) MosquitoMan \n\t \
+(5)Mr.Clean humanoid \n\t (6)Tide-pod feeder?")
+usr = return_class(int(input()))
+print("You have chosen to be a %s !\n"%usr.label)
+time.sleep(1.5)
+
+
+# usr chooses their weapons
+print("Next, you need to choose your weapon.")
+choose_x(x=usr.weapon, x_list=usr.weapons_list,usr_object=usr)
+
+#usr chooses their armor
+print("Finally, you need to choose your armor.\n")
+time.sleep(1)
+print("What'll you choose for your chest armor?\n")
+choose_x(x=usr.chest_armor,x_list=usr.chest_armor_list, usr_object=usr)
+print("What'll you choose for your leg armor?")
+choose_x(usr.leg_armor,usr.leg_armor_list,usr)
+
+#usr chooses their name
+print("Wait, I don't even know what to call you! What's your name?")
+get_name(usr)
+
+#actual adventure begins...
+slow_type("Now the real adventure begins...")
+
+
+
+
+
+
+
+
+
+
+
+
+
